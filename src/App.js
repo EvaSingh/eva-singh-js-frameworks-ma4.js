@@ -1,11 +1,10 @@
 import React from "react";
 import RecipeList from "./components/recipes/RecipeList";
 import './App.css';
-import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <Layout></Layout> 
+    <RecipeList></RecipeList>
   );
 }
 
