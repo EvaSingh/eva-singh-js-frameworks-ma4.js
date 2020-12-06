@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 
-function RecipeItem({ index, title, thumbnail }) {
+function RecipeItem({ title, thumbnail }) {
   return (
     <Card>
       <Card.Img variant="top" src={thumbnail} />
@@ -14,7 +14,6 @@ function RecipeItem({ index, title, thumbnail }) {
 }
 
 RecipeItem.propTypes = {
-  index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired
 };
