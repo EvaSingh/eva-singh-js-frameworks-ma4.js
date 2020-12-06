@@ -1,7 +1,9 @@
 import React, { useState, useEffect }from "react";
 import Spinner from "react-bootstrap/Spinner";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import RecipeItem from "./RecipeItem";
 import { BASE_URL } from "../../constants/api";
-//import RecipeItem from "./RecipeItem";
 //import SearchRecipe from "./SearchRecipe";
 
 export function RecipeList() {
@@ -22,11 +24,18 @@ export function RecipeList() {
   }
 
   return (
-    <ul>
-      {recipes.map((recipe, index) => (
-        <li key={index}>{recipe.title}</li>
-      ))}
-    </ul>    
+    <Row>
+      {recipes.map(recipe => {
+        const { index, title, thumbnail } = recipe;
+
+        return (
+          <Col sm={6} md={3} key={index}>
+            <RecipeItem index={index} title={title} thumbnail={thumbnail} /> 
+          </Col>
+        );
+        
+      })}
+    </Row>    
   );
 }
 
