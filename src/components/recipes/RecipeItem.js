@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 function RecipeItem({ index, title, thumbnail }) {
   return (
@@ -10,11 +8,6 @@ function RecipeItem({ index, title, thumbnail }) {
       <Card.Img variant="top" src={thumbnail} />
       <Card.Body>
       <Card.Title>{title}</Card.Title>
-      <Link to={"recipe/" + index}>
-        <Button variant="secondary" block>
-          View
-        </Button>
-      </Link>
       </Card.Body>
     </Card>
   );
